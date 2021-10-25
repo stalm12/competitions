@@ -10,16 +10,16 @@ import {MatButtonModule} from "@angular/material/button";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
-import { DashboardAssociationComponent } from './dashboard/dashboard-association/dashboard-association.component';
-import { DashboardCompetitionsComponent } from './dashboard/dashboard-competitions/dashboard-competitions.component';
+import { DashboardVereinComponent } from './dashboard/dashboard-association/dashboard-verein.component';
+import { DashboardWettkaempfeComponent } from './dashboard/dashboard-competitions/dashboard-wettkaempfe.component';
 import { DashboardAdministrationComponent } from './dashboard/dashboard-administration/dashboard-administration.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    DashboardAssociationComponent,
-    DashboardCompetitionsComponent,
+    DashboardVereinComponent,
+    DashboardWettkaempfeComponent,
     DashboardAdministrationComponent
   ],
   imports: [
