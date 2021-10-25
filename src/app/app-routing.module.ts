@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path: '', component: DashboardComponent},
+  {path: 'event', loadChildren: () => import('./event/event.module').then(m => m.EventModule)}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
