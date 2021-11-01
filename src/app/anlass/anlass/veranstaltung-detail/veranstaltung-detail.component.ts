@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Veranstaltung} from "../veranstaltung.types";
 
 @Component({
   selector: 'app-event-detail',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./veranstaltung-detail.component.scss']
 })
 export class VeranstaltungDetailComponent implements OnInit {
+
+  @Input() veranstaltung?: Veranstaltung;
 
   constructor() { }
 

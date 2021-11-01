@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {AnlassComponent} from './anlass/anlass.component';
+import {VeranstaltungComponent} from './anlass/veranstaltung.component';
 import {VeranstaltungDetailComponent} from './anlass/veranstaltung-detail/veranstaltung-detail.component';
 import {CompetitorsComponent} from './competitors/competitors.component';
 import {RichterComponent} from './richter/richter.component';
@@ -22,7 +22,7 @@ import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
-    AnlassComponent,
+    VeranstaltungComponent,
     VeranstaltungDetailComponent,
     CompetitorsComponent,
     RichterComponent,

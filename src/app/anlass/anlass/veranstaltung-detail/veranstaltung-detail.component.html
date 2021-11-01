@@ -1,10 +1,12 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      MMG 2022 Wichtrach
+      {{veranstaltung ? veranstaltung.titel : ''}}
     </mat-card-title>
     <mat-card-subtitle>
-      21.05.2022 - 22.05.2022
+      {{veranstaltung?.startdatum | date : 'dd.MM.YYYY'}}
+      {{"bis"}}
+      {{veranstaltung?.enddatum | date : 'dd.MM.YYYY'}}
     </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
