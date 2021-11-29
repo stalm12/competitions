@@ -1,5 +1,6 @@
 <mat-card>
   <mat-card-header>
+    <div mat-card-avatar class="avatar_img"><img src="{{veranstaltung?.logo}}" alt=""></div>
     <mat-card-title>
       {{veranstaltung ? veranstaltung.titel : ''}}
     </mat-card-title>
@@ -9,9 +10,17 @@
       {{veranstaltung?.enddatum | date : 'dd.MM.YYYY'}}
     </mat-card-subtitle>
   </mat-card-header>
+  <mat-divider></mat-divider>
   <mat-card-content>
-    Hier steht jetzt ganz viel alsfjl
-    aslfkj asldf alieo oasiienf lasdfjk. askfj
-    askdfkl .sadflasldf askjo laskjeio.
+    <p>{{veranstaltung?.beschreibung}}</p>
+    <p>Anmeldeschluss: {{veranstaltung?.anmeldeschluss | date : 'dd.MM.YYYY'}}</p>
+    <p>Kategorien: alle Kategorien</p>
+    <p>{{veranstaltung?.wettkampf?.wettkampfRegeln?.erlaubtMannschaft ? 'Mannschaften ✅' : ''}}</p>
+    <ul>
+      <li *ngFor="let dokument of veranstaltung?.dokumente"><a href="{{dokument.url}}" target="_blank">{{dokument.name}}</a></li>
+    </ul>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-button color="warn" (click)="edit()">edit</button>
+  </mat-card-actions>
 </mat-card>

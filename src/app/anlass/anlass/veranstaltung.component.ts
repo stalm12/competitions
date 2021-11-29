@@ -1,18 +1,19 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {veranstaltungExample} from "./veranstaltung.types";
 import {ActivatedRoute} from "@angular/router";
-import {tap} from "rxjs/operators";
+import {takeUntil, tap} from "rxjs/operators";
+import {Subject} from "rxjs";
 
 @Component({
   selector: 'app-event',
   templateUrl: './veranstaltung.component.html',
   styleUrls: ['./veranstaltung.component.scss']
 })
-export class VeranstaltungComponent implements OnInit {
+export class VeranstaltungComponent implements OnInit, OnDestroy{
 
   public veranstaltung = veranstaltungExample;
 
-  public veranstaltungsId: string = '';
+  private destroy$ = new Subject();
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -20,9 +21,17 @@ export class VeranstaltungComponent implements OnInit {
   }
 
   ngOnInit(): void {
-this.activatedRoute.params.pipe(tap(params => {
-  this.veranstaltungsId = params.id;
-}));
+    this.activatedRoute.params
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(params => {
+        // TODO: hier mit der ID die Veranstaltung laden
+        console.log(params.id);
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
 }

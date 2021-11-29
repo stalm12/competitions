@@ -6,7 +6,7 @@ export interface VeranstaltungOverview {
 }
 
 export const veranstaltungOverviewExample1: VeranstaltungOverview = {
-  id: '121',
+  id: 'anlass_id',
   titel: 'MMG 2022',
   startDatum: new Date(),
   endDatum: new Date()

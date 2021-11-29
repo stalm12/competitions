@@ -1,0 +1,36 @@
+<mat-form-field appearance="fill">
+  <mat-label>Titel</mat-label>
+  <input matInput [(ngModel)]="veranstaltung.titel">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Startdatum</mat-label>
+  <input autocomplete="off" matInput [matDatepicker]="picker1" [(ngModel)]="veranstaltung.startdatum">
+  <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+  <mat-datepicker #picker1></mat-datepicker>
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Enddatum</mat-label>
+  <input autocomplete="off" matInput [matDatepicker]="picker2" [(ngModel)]="veranstaltung.enddatum">
+  <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+  <mat-datepicker #picker2></mat-datepicker>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Beschreibung</mat-label>
+  <textarea matInput [(ngModel)]="veranstaltung.beschreibung"></textarea>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Webseite</mat-label>
+  <input matInput [(ngModel)]="veranstaltung.webseite">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Anmeldeschluss</mat-label>
+  <input autocomplete="off" matInput [matDatepicker]="picker3" [(ngModel)]="veranstaltung.anmeldeschluss">
+  <mat-datepicker-toggle matSuffix [for]="picker3"></mat-datepicker-toggle>
+  <mat-datepicker #picker3></mat-datepicker>
+</mat-form-field>
+<mat-checkbox [(ngModel)]="veranstaltung.wettkampf.wettkampfRegeln.erlaubtMannschaft">
+              Mannschaften erlaubt
+</mat-checkbox>
+<mat-divider></mat-divider>
+<button mat-button color="primary" (click)="save()">Speichern</button>
+<button mat-button color="primary" (click)="discard()">Abbrechen</button>

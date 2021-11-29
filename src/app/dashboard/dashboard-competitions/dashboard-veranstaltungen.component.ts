@@ -10,7 +10,7 @@ import {
 })
 export class DashboardVeranstaltungenComponent implements OnInit {
 
-  public wettkaempfe = [veranstaltungOverviewExample1, veranstaltungOverviewExample2, veranstaltungOverviewExample3]
+  public veranstaltungen = [veranstaltungOverviewExample1, veranstaltungOverviewExample2, veranstaltungOverviewExample3]
 
   constructor() { }
 

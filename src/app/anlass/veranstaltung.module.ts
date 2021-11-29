@@ -18,6 +18,16 @@ import {ResultatCardComponent} from './anlass/resultat-card/resultat-card.compon
 import {MatGridListModule} from "@angular/material/grid-list";
 import {AnlassRoutingModule} from "./anlass-routing.module";
 import {MatCardModule} from "@angular/material/card";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatButtonModule} from "@angular/material/button";
+import {VeranstaltungDetailEditComponent} from './anlass/veranstaltung-detail/veranstaltung-detail-edit/veranstaltung-detail-edit.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {FormsModule} from "@angular/forms";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 
 @NgModule({
@@ -36,14 +46,24 @@ import {MatCardModule} from "@angular/material/card";
     TeamCardComponent,
     FinanzenCardComponent,
     WettkampfCardComponent,
-    ResultatCardComponent
+    ResultatCardComponent,
+    VeranstaltungDetailEditComponent
   ],
   imports: [
     CommonModule,
     MatGridListModule,
     AnlassRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatInputModule,
+    MatNativeDateModule,
+    MatCheckboxModule
   ]
 })
-export class AnlassModule {
+export class VeranstaltungModule {
 }

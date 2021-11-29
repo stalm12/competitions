@@ -1,8 +1,14 @@
-<mat-grid-list cols="4">
-  <h1>{{veranstaltungsId}}</h1>
-  <mat-grid-tile colspan="2" rowspan="2"><app-event-detail [veranstaltung]="veranstaltung"> </app-event-detail></mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1"><app-competition-card></app-competition-card></mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1"><app-judges-card></app-judges-card></mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1"><app-competitors-card></app-competitors-card></mat-grid-tile>
-  <mat-grid-tile colspan="1" rowspan="1"><app-finances-card></app-finances-card></mat-grid-tile>
-</mat-grid-list>
+<div class="flex-container dashboard">
+  <div class="flex-container__25 row-column">
+    <app-event-detail [veranstaltung]="veranstaltung"></app-event-detail>
+  </div>
+  <div class="flex-container__75 row-column">
+    <app-competition-card class="kachel"></app-competition-card>
+    <app-judges-card class="kachel"></app-judges-card>
+    <app-competitors-card class="kachel"></app-competitors-card>
+    <app-teams-card class="kachel"></app-teams-card>
+    <app-results-card class="kachel"></app-results-card>
+    <app-finances-card class="kachel"></app-finances-card>
+  </div>
+</div>
+

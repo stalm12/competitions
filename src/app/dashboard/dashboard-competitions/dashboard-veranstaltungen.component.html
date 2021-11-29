@@ -1,11 +1,14 @@
 <h1>Wettkämpfe</h1>
 <div class="cardcontainer">
-  <ng-container *ngFor="let wettkampf of wettkaempfe">
+  <ng-container *ngFor="let veranstaltung of veranstaltungen">
+    <a routerLink="event/{{veranstaltung.id}}">
+
       <mat-card class="dashboard__card">
         <mat-card-header>
-          <mat-card-title>{{wettkampf.titel}}</mat-card-title>
-          <mat-card-subtitle>{{wettkampf.startDatum | date:'dd.MM.yyyy'}}
-            - {{wettkampf.endDatum | date:'dd.MM.yyyy'}}</mat-card-subtitle>
+          <mat-card-title>{{veranstaltung.titel}}</mat-card-title>
+
+          <mat-card-subtitle>{{veranstaltung.startDatum | date:'dd.MM.yyyy'}}
+            - {{veranstaltung.endDatum | date:'dd.MM.yyyy'}}</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <mat-list>
@@ -14,5 +17,6 @@
           </mat-list>
         </mat-card-content>
       </mat-card>
+    </a>
   </ng-container>
 </div>
