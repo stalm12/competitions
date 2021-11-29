@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardWettkaempfeComponent } from './dashboard-wettkaempfe.component';
+import { DashboardVeranstaltungenComponent } from './dashboard-veranstaltungen.component';
 
 describe('DashboardCompetitionsComponent', () => {
-  let component: DashboardWettkaempfeComponent;
-  let fixture: ComponentFixture<DashboardWettkaempfeComponent>;
+  let component: DashboardVeranstaltungenComponent;
+  let fixture: ComponentFixture<DashboardVeranstaltungenComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardWettkaempfeComponent ]
+      declarations: [ DashboardVeranstaltungenComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardWettkaempfeComponent);
+    fixture = TestBed.createComponent(DashboardVeranstaltungenComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

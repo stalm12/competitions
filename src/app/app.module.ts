@@ -11,7 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import { DashboardVereinComponent } from './dashboard/dashboard-association/dashboard-verein.component';
-import { DashboardWettkaempfeComponent } from './dashboard/dashboard-competitions/dashboard-wettkaempfe.component';
+import { DashboardVeranstaltungenComponent } from './dashboard/dashboard-competitions/dashboard-veranstaltungen.component';
 import { DashboardAdministrationComponent } from './dashboard/dashboard-administration/dashboard-administration.component';
 
 @NgModule({
@@ -19,7 +19,7 @@ import { DashboardAdministrationComponent } from './dashboard/dashboard-administ
     AppComponent,
     DashboardComponent,
     DashboardVereinComponent,
-    DashboardWettkaempfeComponent,
+    DashboardVeranstaltungenComponent,
     DashboardAdministrationComponent
   ],
   imports: [
